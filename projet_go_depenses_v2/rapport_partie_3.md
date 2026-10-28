@@ -1,0 +1,3 @@
+# Rapport — Partie 3 : SQLite et repository
+
+Le pilote `modernc.org/sqlite` est utilisé avec `database/sql`. Au démarrage, l'application ouvre `expenses.db` et exécute la migration SQL qui crée les tables. Le repository regroupe les méthodes `Create`, `GetAll`, `GetByID`, `Update` et `Delete`, afin que les handlers n'exécutent pas directement de requêtes SQL. Les valeurs sont transmises avec des paramètres `?`, plutôt que concaténées dans les requêtes, ce qui aide à prévenir les injections SQL. L'interface permet d'ajouter, modifier et supprimer les dépenses. Les données persistent après redémarrage. Pour vérifier, ajouter une dépense, redémarrer le serveur puis vérifier qu'elle est toujours présente.

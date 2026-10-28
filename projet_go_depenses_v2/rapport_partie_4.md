@@ -1,0 +1,3 @@
+# Rapport — Partie 4 : Catégories et filtres
+
+La table `categories` contient les catégories Alimentation, Transport, Logement, Loisirs, Santé et Autre. La colonne `category_id` de `expenses` est une clé étrangère vers cette table. Les formulaires d'ajout et de modification proposent un menu déroulant. La liste affiche le nom de la catégorie grâce à une requête `JOIN`, évitant une requête séparée pour chaque dépense. Les filtres utilisent les paramètres URL `category`, `from` et `to`. Ils peuvent être appliqués séparément ou ensemble ; sans filtre, toutes les dépenses s'affichent. Pour tester, afficher la liste sans filtre, filtrer par catégorie, par dates, puis combiner les critères.

@@ -1,0 +1,3 @@
+# Rapport — Partie 2 : Templates et première interface
+
+Le projet utilise `html/template` pour produire les pages HTML. La structure Expense représente une dépense. Les fichiers sont séparés entre handlers, modèles, repository, templates et CSS. Le template `{{range .Expenses}}` affiche les lignes du tableau. Le formulaire utilise POST et `r.ParseForm()` pour lire les champs. Après un ajout réussi, le serveur redirige avec le statut 303 (Post/Redirect/Get), ce qui évite de renvoyer le formulaire au rafraîchissement. `html/template` échappe les valeurs insérées et réduit les risques de XSS. Le stockage en mémoire initial est remplacé par SQLite à l'étape 3.
